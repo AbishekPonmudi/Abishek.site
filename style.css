@@ -855,7 +855,8 @@ noscript{
 /* about section starts from here */
 .about-section-container{
     width: 100%;
-    height: fit-content;
+    height: 100%;
+   margin-inline-start: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1096,22 +1097,26 @@ noscript{
 /* ######################################################## */
 /* projects section starts */
 .projects-section-container{
-    margin-top: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120%;
+    margin-left: 100px;
 }
 .projects-section-div{
+    
     width: 100%;
+    font-family: fira code;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .projects-heading{
+    
     width: 100%;
     display: flex;
+    font-family: fira code;
     align-items: center;
     gap: 10px;
 }
@@ -1127,6 +1132,7 @@ noscript{
     -webkit-text-fill-color: transparent;
 }
 .projectsHeadingP{
+    
     width: 300px;
     height: 1px;
     background-image: -webkit-gradient(linear,left top,right top,from(#b0f3f1),to(#ffcfdf));
@@ -1134,23 +1140,18 @@ noscript{
     background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
 }
 .project-boxes-div{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    padding: 50px;
+    
+ margin-top: 100px;
+  
 }
 .project-boxes-div a{
     text-decoration: none;
-    width: 100%;
+ 
 }
 .project-box{
     background-color: rgba(255, 255, 255, 0.005);
     width: 100%;
-    height: 400px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1171,7 +1172,9 @@ noscript{
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 3px;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradientforlanguage 5s ease infinite;
@@ -1179,28 +1182,28 @@ noscript{
     left: 0;
 }
 .info-div{
-    width: 50%;
-    height: 100%;
+    width: 70%;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding: 0 40px;
 }
 .faviconforProject{
     background-color: white;
-    width: 20px;
-    border-radius: 50%;
+    width: 0px;
+    border-radius: 0%;
 }
 .faviconforProjectAquaregia{
     width: 20px;
 }
 .image-div{
     width: 50%;
-    height: 100%;
+    height: 50%;
     overflow: hidden;
-    padding-top: 70px;
+    padding-top: 80px;
     padding-left: 10px;
 }
 .image-div img{
@@ -1214,13 +1217,15 @@ noscript{
     font-weight: 700;
 }
 .ProjectDescription{
-    color: gray;
+    color: rgb(156, 153, 153);
+    margin-bottom: 100px;
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 /* Project visit button */
 .cta {
     position: relative;
+  
     padding: 12px 18px;
     transition: all 0.2s ease;
     border: none;
