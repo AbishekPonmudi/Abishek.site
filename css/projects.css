@@ -1,0 +1,109 @@
+/* Main Container for Projects Section */
+.project-section {
+    padding: 10px 8%; /* Slightly reduced padding for a tighter layout */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the section within the page */
+    color: #F5E8DC; /* Warm off-white text */
+    box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+/* Header of Projects Section */
+.project-section h1 {
+    font-size: 2.5em; /* Larger heading */
+    color: #FFFFFF; /* Pure white for the main heading */
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 20px; /* Reduced margin to make the title closer */
+}
+
+/* Project Items */
+.project-item {
+    padding: 20px; /* Adjusted padding for mobile responsiveness */
+    margin-bottom: 30px; /* Adjusted margin between items for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    animation: fadeIn 1s ease-in-out; /* Reuses fade-in animation */
+}
+
+/* Project Title */
+.project-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px; /* Increased bottom margin for better spacing */
+    text-align: left; /* Align project title to the left */
+}
+
+/* About Section */
+.project-item h3 {
+    font-size: 1.5em;
+    color: #F5E8DC; /* Same as general text color */
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    text-align: left; /* Align about section heading to the left */
+}
+
+/* Project Description */
+.project-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Increased bottom margin for more space */
+    text-align: justify; /* Justify the text content for a neat look */
+}
+
+/* Highlighted Text */
+.project-item .highlight {
+    color: yellow; /* Highlight important words in yellow */
+    font-weight: bold;
+}
+
+/* GitHub Button */
+.project-item a {
+    display: inline-flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 8px 20px;
+    background-color: #2ECC40;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.project-item a:hover {
+    background-color: #27AE60;
+}
+
+.project-item a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-section {
+        padding: 10px 5%; /* Reduced left-right padding for better mobile layout */
+    }
+
+    .project-item {
+        padding: 15px; /* Reduced padding for a compact look */
+    }
+
+    .project-item h2 {
+        font-size: 1.6em; /* Slightly smaller title size for smaller screens */
+        text-align: left; /* Keep title aligned to the left */
+    }
+
+    .project-item h3 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+
+    .project-item p {
+        font-size: 0.95em;
+        text-align: justify;
+        margin-left: -10px; /* Move content slightly to the left */
+        margin-right: -10px; /* Extend content slightly to the right */
+    }
+
+    .project-item a {
+        font-size: 0.9em;
+        padding: 6px 15px; /* Adjust button size for mobile */
+    }
+}

@@ -1,0 +1,79 @@
+/* Blog Page-Specific Styles */
+body {
+    background-color: #04101E; /* Consistent dark background */
+    color: #F5E8DC;
+  }
+  
+  .blog-list {
+    padding: 20px 7%; /* Slightly indented from both sides */
+    max-width: 1200px; /* Keep the content centered and narrower */
+    margin: 0 auto;
+  }
+  
+  .blog-list article {
+    margin-bottom: 30px; /* Spacing between blog items */
+    animation: fadeIn 1s ease-in-out; /* Smooth entry animation */
+  }
+  
+  .blog-list h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #2ECC40; /* Green for blog titles */
+  }
+  
+  .blog-list h3 a {
+    text-decoration: none;
+    color: inherit; /* Inherit the green color */
+    transition: color 0.3s;
+  }
+  
+  .blog-list h3 a:hover {
+    color: #27AE60; /* Slightly darker green on hover */
+  }
+  
+  .blog-meta {
+    font-size: 0.9em;
+    color: #AAAAAA;
+    margin-bottom: 10px;
+  }
+  
+  .blog-list p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    color: #FFFFFF;
+    background-color: #FF4136; /* Bright red for buttons */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .read-more:hover {
+    background-color: #C0392B; /* Darker red on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .blog-list {
+      padding: 10px 5%; /* Adjust padding for smaller screens */
+    }
+  
+    .blog-list h3 {
+      font-size: 1.5em;
+    }
+  
+    .blog-list p {
+      font-size: 0.95em;
+    }
+  
+    .read-more {
+      padding: 6px 15px; /* Adjust button size for mobile */
+    }
+  }
+  

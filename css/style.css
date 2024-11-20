@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+  background-color: #04101E; /* Darker blue */
+  color: #F5E8DC; /* Warm, off-white */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensures content fills the viewport */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between; /* Align logo left, links right */
+  align-items: center;
+  width: 100%;
+  padding: 15px 5%; /* Adjusted padding for responsiveness */
+  background-color: #04101E; /* Same as body background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for separation */
+}
+
+.logo {
+  font-size: 1.8em; /* Increased size for visibility */
+  color: #FF4136; /* Red accent */
+  margin-right: auto; /* Push navigation to the right */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align the logo and image */
+  padding-left: 20px; /* Add more space before the logo */
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px; /* Space between image and logo text */
+}
+
+nav {
+  display: flex;
+  gap: 15px; /* Adjust spacing between links */
+}
+
+nav a {
+  color: #F5E8DC;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 5px 10px; /* Added padding for better touch targets */
+}
+
+nav a:hover {
+  color: #2ECC40; /* Green on hover */
+  border-bottom: 2px solid #2ECC40; /* Underline effect */
+}
+
+/* Main Container */
+.main-container {
+  flex-grow: 1; /* Ensures main content stretches to fill viewport */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 5%; /* Adjusted padding for responsiveness */
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+/* About Section */
+.about-section {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+
+.about-section img {
+  width: 180px; /* Adjusted size for better balance */
+  height: 180px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h1 {
+  font-size: 2em;
+  color: #FF4136;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.about-section h3 {
+  color: #F5E8DC;
+  margin-top: 20px;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adjust spacing between icons */
+  margin-top: 10px;
+}
+
+.social-links a img {
+  width: 30px; /* Increased size for better visibility */
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2); /* Slightly larger scale on hover */
+}
+
+/* Blog Section */
+.blog-section {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.blog-section h1 {
+  font-size: 2.2em; /* Increased size for prominence */
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.blog-preview {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2ECC40;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.blog-preview h3 {
+  font-size: 1.8em;
+  color: #F5E8DC;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blog-preview p {
+
+  font-weight: 500;
+  padding: 5px 10px;
+  font-size: 1em;
+  
+  color: white;
+}
+
+.blog-details {
+  font-size: 0.9em;
+  color: #AAAAAA;
+  margin-top: 5px;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-top: 10px;
+  color: #FFFFFF;
+  background-color: #2ECC40;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #27AE60;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #061A2C;
+  color: #F5E8DC;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align content for smaller screens */
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .about-section,
+  .blog-section {
+    max-width: 100%;
+  }
+
+  .blog-section h1 {
+    font-size: 2em;
+  }
+
+  .blog-preview h3 {
+    font-size: 1.5em;
+  }
+}
