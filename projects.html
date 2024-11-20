@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Havox - Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/profile.jpg" alt="Havox Logo">
+      Havox
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="project-section">
+      <style>
+        h1 {
+          text-decoration: underline;
+          text-decoration-color: red;
+          color: ivory;
+          text-align: center;
+        }
+      </style>
+      <h1 style="text-align: center; font-family:'Courier New', Courier, monospace">My Projects</h1>
+      
+
+      <!-- Project 1: Endpoint Detection and Response -->
+      <div class="project-item">
+        <h2>Endpoint Detection and Response (EDR)</h2> <!-- Title of the project -->
+        
+        <h3 style="color: limegreen; text-decoration: underline;">About Planqx EDR</h3>
+        <p>This is an open source EDR basically advance Anti-virus tool, build with the <span class="highlight">Cloud-Native Architecture</span>,<span style="color: red;"> let Explore how this works</span> - start with client side, the <span class="highlight">lightweight forwarder</span> named Planqx Sensor, This sensor serves as the backbone of the EDR system which forward the Data, system logs, and some internal Telemetry data to the server, this entirely monitor the system with both <span class="highlight">user and kernel mode</span>, <span class="highlight">network level</span> motive to safe guard all side of threat's, and this sensor multiple technique like <span class="highlight">API hooking, ELAM (Early launch anti-malware), ETW, kernel level monitoring custom Kernel driver</span>, which allows to monitor low-level system activities that might bypass traditional user-mode defenses like other AV, this system integrates advanced <span class="highlight">logging and alerting mechanisms</span> empowering <span class="highlight">incident response</span> teams with detailed log analysis capabilities for effective threat detection and resolution.</p>
+
+        <h3 style="color: #2ECC40; text-decoration: underline;">Special Features and Outcomes</h3>
+        <p>This EDR system is designed to protect enterprise systems from threats by detecting malicious activity at the endpoint base level.</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Real-Time Threat Detection</span> – Detects malicious activities such as process injections, malware execution, unauthorized access.</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Network Level Detection</span> – Analyse the whole network Traffic like an firewall, prevent from Malicious - Traffic, Domains, IP's, DDos attack, System scanning (like port scaning), etc...</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Scability</span> – Easily handles large-scale deployments without compromising performance control over 5000 endpoints concurrently as of now.</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Exploit suggestor </span> – Analyse the Endpoints system logs to identify the potential vulnerbilities by comparing its patch level against database of known vulnerbilities using CVE's, Exploit Db and IOC's and update the Endpoints using RPC/WMI.</p>
+
+        <a href="https://github.com/AbishekPonmudi/PlanqX_EDR-Endpoint-Detection-and-Response" target="_blank">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 8px;"> Visit on GitHub
+        </a>
+
+        <!-- Line separator after the project -->
+         
+        <hr> 
+        <h2>Windows Powershell authenticator</h2> <!-- Title of the project -->
+        
+        <h3 style="color: #2ECC40; text-decoration: underline;">About</h3>
+        <p>The <span class="highlight">Windows Authenticator</span> is a security script designed to provide an <span class="highlight">additional layer</span> of authentication for Windows PowerShell and Command Prompt users. It ensures advanced-level security by authenticating users before <span class="highlight">granting access</span> to <span class="highlight">sensitive operations</span> or <span class="highlight">resources</span>.</p>
+
+        <h3 style="color: #2ECC40; text-decoration: underline;">Why Windows Authenticator?</h3>
+        <p> While Windows is generally considered secure, it may <span class="highlight">lack of the authentication </span> features commonly found in Linux systems, such as the <span class="highlight">sudo or Root user </span>The Windows Authenticator addresses this gap by introducing an authentication mechanism similar to the one found in Linux systems, ensuring enhanced security and user control.</p>
+        
+        <h3 style="color: #2ECC40; text-decoration: underline;">let's discuss How It Works ?</h3>
+        <p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Registry Configuration</span> – The script sets a registry key to control access to PowerShell and Command Prompt.</p>
+        <p><span class="highlight" style="color:rgb(174, 0, 255);">User Authentication</span> – Users are prompted to enter their credentials when attempting to access PowerShell or Command Prompt.</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255)">Credential Validation</span> – The entered credentials are validated against predefined username and password variables.</p>
+        <p><span class="highlight" style="color: rgb(174, 0, 255);">Access Granting</span> – If the credentials match, access to PowerShell and Command Prompt is granted. Otherwise, access is denied.</p>
+
+        <a href="https://github.com/AbishekPonmudi/Command-Privelage-Management-for-Powershell" target="_blank">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 8px;"> Visit on GitHub
+        </a>
+        <hr>
+        <h2>Vulnerbility Scanner</h2> <!-- Title of the project -->
+        
+        <h3 style="color: #2ECC40; text-decoration: underline;">About</h3>
+        <p>This is the simple <span class="highlight">Vulnerbility scanner</span> developed using <span class="highlight">Python</span>, this is mainly developed to scan and analyse the system to <span class="highlight">find the vulbnerbilities</span>, this uses <span class="highlight">External API, CVE </span>to detect the vulnerbility and patch's, this is <span class="highlight">platform independent</span> that means this can work on both Windows and linux based systems, this include scans like <span class="highlight">system configuration's , firewall configurations, open /  closed port status, BIOS status, secure boot status, file status, Application status, kernal status.</span>.</p>
+
+        <p><span class="highlight"  style="color: rgb(174, 0, 255);">Vulnerability Detection</span> – Uses external APIs and CVE databases to identify vulnerabilities and suggest patches.</p>
+        <p><span class="highlight"  style="color: rgb(174, 0, 255);">Cross-Platform Compatibility</span> – Runs seamlessly on both Windows and Linux systems.</p>
+        <p><span class="highlight"  style="color: rgb(174, 0, 255);">Ease of Use</span> – Designed for simplicity, making it accessible to a wide range of users.</p>
+
+        <a href="https://github.com/AbishekPonmudi/Vulner_scanner" target="_blank">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 8px;"> Visit on GitHub
+        </a>
+        <hr>
+        To find more project's please visit the my github to explore some projects that not mentioned here   !  <a href="https://github.com/AbishekPonmudi/" target="_blank">    Visit here</a> 
+      </div>
+
+    </section>
+  </main>
+
+
+  <footer>
+    &copy; 2024 Havox. All rights reserved.
+  </footer>
+</body>
+</html>

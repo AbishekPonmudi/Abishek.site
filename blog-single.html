@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website with System-UI Font</title>
+  <style>
+    /* Darker blue background */
+    body {
+      background-color: #061A2C; /* Very dark blue */
+      color: #F5E8DC; /* Warm, off-white */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+      font-weight: 500; /* Medium weight */
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700; /* Bold weight */
+    }
+
+    p {
+      font-weight: 500; /* Medium weight */
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #FFD700; /* Gold color for section titles */
+    }
+
+    .content {
+      max-width: 700px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Let do NAT Traversel !...</h1>
+    
+    <p class="section-title">What is TURN?</p>
+    <p>TURN (Traversal Using Relays around NAT) is a protocol that assists in traversing Network Address Translators (NATs) or firewalls to facilitate peer-to-peer communications. It is an extension of the STUN (Session Traversal Utilities for NAT) protocol and is defined in <a href="https://datatracker.ietf.org/doc/html/rfc8656" target="_blank">RFC 8656</a>.</p>
+    
+    <p class="section-title">How do I use TURN?</p>
+    <p>To use the TURN protocol in your application, you need a tool or library. Most users of TURN use it as part of a WebRTC library, such as the one in their browser or as part of <a href="https://pion.ly" target="_blank">Pion</a>, <a href="https://github.com/webrtc-rs" target="_blank">webrtc-rs</a>, or <a href="https://webrtc.googlesource.com/src" target="_blank">libwebrtc</a>. Some of these libraries offer TURN client support directly, like Pion for Golang and webrtc-rs for Rust.</p>
+    
+    <p class="section-title">Key Concepts of TURN</p>
+    <ul>
+      <li><b>NAT (Network Address Translation):</b> A method routers use to map multiple private IP addresses to a single public IP.</li>
+      <li><b>TURN Server:</b> A relay server that acts as an intermediary for traffic between clients behind NATs.</li>
+      <li><b>TURN Client:</b> An application that uses the TURN protocol to communicate through a TURN server.</li>
+      <li><b>Allocation:</b> When a TURN server reserves a unique IP and port for a client.</li>
+      <li><b>Relayed Transport Address:</b> The IP address and port on the TURN server that peers use to send data to the client.</li>
+    </ul>
+    
+    <p class="section-title">How TURN Works</p>
+    <ol>
+      <li>A TURN client sends an Allocate request to a TURN server.</li>
+      <li>The server creates an allocation and returns a relayed transport address to the client.</li>
+      <li>The client shares this relayed address with its peers.</li>
+      <li>The TURN server forwards incoming data to the client and sends outgoing data from the client to the peer.</li>
+    </ol>
+    
+    <p class="section-title">TURN vs VPN</p>
+    <p>TURN is often compared to VPNs, but they serve different purposes:</p>
+    <ul>
+      <li><b>VPN:</b> A general-purpose tool that encrypts all internet traffic, routing it through a server to enhance privacy and security.</li>
+      <li><b>TURN Server:</b> A specialized tool used mainly for real-time communication, acting as a relay only for specific application traffic.</li>
+    </ul>
+    
+    <p class="section-title">Why is TURN Useful?</p>
+    <p>TURN is valuable in scenarios where direct peer-to-peer communication is blocked due to NAT or firewall restrictions. It provides:</p>
+    <ul>
+      <li><b>NAT Traversal:</b> Enabling connections between peers behind NATs.</li>
+      <li><b>Firewall Bypassing:</b> Allowing communication in environments with strict firewall policies.</li>
+      <li><b>Consistent Connectivity:</b> Offering a fallback method when direct connections fail.</li>
+      <li><b>Privacy:</b> Hiding actual IP addresses by relaying traffic through a TURN server.</li>
+      <li><b>Applications:</b> Essential for VoIP, video conferencing, online gaming, and IoT communication.</li>
+    </ul>
+  </div>
+</body>
+</html>
