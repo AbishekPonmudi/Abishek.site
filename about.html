@@ -4,26 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Havox - About</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
+  <!-- Loading Animation Placeholder -->
+  <div id="loader" class="loader">
+    <span class="loader-text">Let's hack it</span>
+  </div>
+
   <header>
-    <div class="logo">Havox</div>
+    <div class="logo">
+      <img src="images/profile.jpg" alt="Havox Logo">
+      <span>Havox</span>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <section class="about">
-      <h2>About Me</h2>
-     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
-  <p>Under development - will be updated soon</p>
-  <a href="index.html" class="read-more" style="margin-top: 10px;">Go back</a>
-</div>
-    </section>
+    <div class="about-container">
+      <!-- Profile Photo -->
+      <img src="images/profile.jpg" alt="Havox's Profile Picture" class="profile-img">
+ 
+      <!-- About Me -->
+      <section class="about-me">
+        <h1>About Havox</h1>
+        <p>
+          I’m Abishek, also known as Havox an Developer, ethical hacker, and cloud security enthusiast with a strong focus on 
+          <span class="highlight-purple">offensive security</span>, <span class="highlight-purple">threat intelligence</span>, and 
+          <span class="highlight-purple">cloud security</span>. I’ve worked on <strong class="highlight-purple">PlanqX EDR</strong> and other 
+          <strong class="highlight-purple">security tools</strong>, reported vulnerabilities in <span class="highlight-purple">bug bounty programs</span> 
+          on <span class="highlight-purple">Google</span>, <span class="highlight-purple">LeetCode</span>, 
+          <span class="highlight-purple">NoBullProjects</span>, and internal organizations, identifying vulnerabilities and enhancing security. 
+          I’m also passionate about <span class="highlight-purple">software development</span>, exploring new technologies, and building 
+          <span class="highlight-purple">secure and efficient systems</span>. Check out my work on 
+          <a href="https://github.com/AbishekPonmudi" target="_blank" class="inline-link highlight-purple">GitHub</a>.
+      </p>
+      
+      
+      
+      </section>
+
+      <!-- Skills -->
+      <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-icons">
+          <img src="images/c-original.svg" alt="C" class="skill-icon" title="C">
+          <img src="images/cplusplus-original.svg" alt="C++" class="skill-icon" title="C++">
+          <img src="images/python-original.svg" alt="Python" class="skill-icon" title="Python">
+          <img src="images/powershell.png" alt="PowerShell" class="skill-icon" title="PowerShell">
+          <img src="images/bash.svg" alt="Bash" class="skill-icon" title="Bash">
+          <img src="images/linux-original.svg" alt="Linux" class="skill-icon" title="Linux">
+          <img src="images/windows.png" alt="Windows" class="skill-icon" title="Windows">
+          <img src="images/burp-suite.png" alt="Burp Suite" class="skill-icon" title="Burp Suite">
+          <img src="images/docker.svg" alt="Docker" class="skill-icon" title="Docker">
+          <img src="images/wireshark.png" alt="WireShark" class="skill-icon" title="WireShark">
+          <img src="images/owasp.jpg" alt="OWASP Top 10" class="skill-icon" title="OWASP Top 10">
+          <img src="images/planqx.png" alt="PlanqX EDR" class="skill-icon" title="PlanqX EDR">
+          <img src="images/mysql-original-wordmark.svg" alt="MySQL" class="skill-icon" title="MySQL">
+          <img src="images/aws.svg" alt="AWS" class="skill-icon" title="AWS">
+          <img src="images/git.png" alt="Git" class="skill-icon" title="Git">
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:havox004@gmail.com" class="inline-link">havox004@gmail.com</a></p>
+      </section>
+    </div>
   </main>
+
+  <footer>
+    © 2025 Havox. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Loader -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.display = '1';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1000); // 1000ms = 1 second
+    });
+
+  </script>
+
 </body>
 </html>

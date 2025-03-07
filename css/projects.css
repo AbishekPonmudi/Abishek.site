@@ -1,109 +1,338 @@
-/* Main Container for Projects Section */
+/* General Styles */
+body {
+  background-color: #04101E;
+  color: #F5E8DC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 5%;
+  background-color: #04101E;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #FF4136;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #F5E8DC;
+  font-family: 'Anonymous Pro', monospace;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 7px 15px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #2ECC40;
+  background: rgba(46, 204, 64, 0.1);
+  border-radius: 5px;
+}
+
+
+/* Project Section */
 .project-section {
-    padding: 10px 8%; /* Slightly reduced padding for a tighter layout */
-    max-width: 1200px;
-    margin: 0 auto; /* Centers the section within the page */
-    color: #F5E8DC; /* Warm off-white text */
-    box-sizing: border-box; /* Ensures padding is included within the width */
+  padding: 40px 6% 40px 6%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 600;
 }
 
-/* Header of Projects Section */
+.project-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .project-section h1 {
-    font-size: 2.5em; /* Larger heading */
-    color: #FFFFFF; /* Pure white for the main heading */
-    text-align: left; /* Align heading to the left */
-    margin-bottom: 20px; /* Reduced margin to make the title closer */
+  font-size: 2.5em;
+  color: #FF4136;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+  font-weight: 700;
 }
 
-/* Project Items */
+/* Project Item */
 .project-item {
-    padding: 20px; /* Adjusted padding for mobile responsiveness */
-    margin-bottom: 30px; /* Adjusted margin between items for better spacing */
-    border-radius: 8px; /* Rounded corners */
-    animation: fadeIn 1s ease-in-out; /* Reuses fade-in animation */
+  background: rgba(6, 26, 44, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+  width: 100%;
 }
 
-/* Project Title */
 .project-item h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px; /* Increased bottom margin for better spacing */
-    text-align: left; /* Align project title to the left */
+  font-size: 1.9em;
+  color: #F5E8DC;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-/* About Section */
 .project-item h3 {
-    font-size: 1.5em;
-    color: #F5E8DC; /* Same as general text color */
-    margin-bottom: 15px; /* Increased margin for better spacing */
-    text-align: left; /* Align about section heading to the left */
+  font-size: 1.4em;
+  color: #2ECC40;
+  margin: 20px 0 10px;
+  text-align: left;
 }
 
-/* Project Description */
 .project-item p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 20px; /* Increased bottom margin for more space */
-    text-align: justify; /* Justify the text content for a neat look */
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 15px;
+  padding: 0 25px;
 }
 
-/* Highlighted Text */
+.project-item ul {
+  list-style: none;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+
+.project-item ul li {
+  font-size: 1.1em;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-item ul li:before {
+  content: ">>";
+  color: #2ECC40;
+  position: absolute;
+  left: 0;
+}
+
+/* Project Divider */
+.project-divider {
+  border: none;
+  height: 3px;
+  background-color: #800080;
+  margin: 25px 0 0;
+}
+
+/* Highlight Class */
 .project-item .highlight {
-    color: yellow; /* Highlight important words in yellow */
-    font-weight: bold;
+  font-weight: 700;
+  color: #FF4136;
 }
 
-/* GitHub Button */
-.project-item a {
-    display: inline-flex;
-    align-items: center;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding: 8px 20px;
-    background-color: #2ECC40;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+/* GitHub Link */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  color: #F5E8DC;
+  background-color: #2ECC40;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.project-item a:hover {
-    background-color: #27AE60;
+.github-link img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
 
-.project-item a img {
-    width: 25px;
-    height: 25px;
-    margin-right: 8px; /* Space between the icon and text */
+.github-link:hover {
+  background-color: #27AE60;
+}
+
+/* More Projects */
+.more-projects {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Inline Link */
+.inline-link {
+  color: #2ECC40;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.inline-link:hover {
+  color: #27AE60;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #061A2C;
+  color: #F5E8DC;
+  font-size: 0.9em;
+  margin-top: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .project-section {
+    padding: 30px 5%;
+  }
+
+  .project-item {
+    padding: 25px;
+  }
+
+  .project-item p {
+    padding: 0 20px;
+  }
+
+  .project-item ul {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 768px) {
-    .project-section {
-        padding: 10px 5%; /* Reduced left-right padding for better mobile layout */
-    }
+  header {
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center;
+    padding: 10px 5%;
+  }
 
-    .project-item {
-        padding: 15px; /* Reduced padding for a compact look */
-    }
+  .logo {
+    margin-bottom: 10px; /* Space between logo and nav */
+  }
 
-    .project-item h2 {
-        font-size: 1.6em; /* Slightly smaller title size for smaller screens */
-        text-align: left; /* Keep title aligned to the left */
-    }
+  nav {
+    flex-direction: row; /* Keep nav links horizontal */
+    justify-content: center;
+    gap: 8px;
+  }
 
-    .project-item h3 {
-        font-size: 1.3em;
-        text-align: left;
-    }
+  nav a {
+    font-size: 0.9em;
+    padding: 5px 8px;
+  }
 
-    .project-item p {
-        font-size: 0.95em;
-        text-align: justify;
-        margin-left: -10px; /* Move content slightly to the left */
-        margin-right: -10px; /* Extend content slightly to the right */
-    }
+  .project-section {
+    padding: 20px 4%;
+  }
 
-    .project-item a {
-        font-size: 0.9em;
-        padding: 6px 15px; /* Adjust button size for mobile */
-    }
+  .project-item {
+    padding: 20px;
+  }
+
+  .project-section h1 {
+    font-size: 2em;
+  }
+
+  .project-item h2 {
+    font-size: 1.6em;
+  }
+
+  .project-item h3 {
+    font-size: 1.2em;
+  }
+
+  .project-item p,
+  .project-item ul li {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+
+  .project-item ul {
+    padding: 0 25px;
+  }
+
+  .project-divider {
+    height: 2px;
+    margin: 20px 0 0;
+  }
+
+  .github-link {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+
+  .more-projects {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  nav {
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 0.85em;
+    padding: 4px 6px;
+  }
+
+  .project-section {
+    padding: 15px 3%;
+  }
+
+  .project-item {
+    padding: 15px;
+  }
+
+  .project-item p {
+    padding: 0 10px;
+  }
+
+  .project-item ul {
+    padding: 0 20px;
+  }
 }
