@@ -2,55 +2,305 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z3VGQSC7Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Z3VGQSC7Z');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
-  <title>Blog-Havox</title>
-  <style>
-    /* Darker blue background */
-    body {
-      background-color: #061A2C; /* Very dark blue */
-      color: #F5E8DC; /* Warm, off-white */
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
-      font-weight: 500; /* Medium weight */
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    h1 {
-      font-weight: 700; /* Bold weight */
-    }
-
-    p {
-      font-weight: 500; /* Medium weight */
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      font-weight: 600;
-      margin-top: 20px;
-      font-size: 1.2em;
-      color: #FFD700; /* Gold color for section titles */
-    }
-
-    .content {
-      max-width: 700px;
-      text-align: left;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-  </style>
+  <title>Havox - Blog</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="css/blog-single.css"> <!-- Blog-specific styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Hacker font -->
 </head>
 <body>
-  <div class="content">
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
-  <p>Under development - will be updated soon</p>
-  <a href="index.html" class="read-more" style="margin-top: 10px;">Go back</a>
-</div>
-  </div>
+  <header>
+    <div class="logo">
+      <img src="images/profile.jpg" alt="Havox Logo">
+      Havox
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-post">
+      <h1>Introduction to Malware Analysis</h1>
+      <p class="intro">
+        <span class="highlight">Malware analysis</span> is the process of understanding the behavior, origin, and impact of malicious software. As <strong>cyber threats</strong> evolve, organizations and security researchers must continuously analyze and mitigate the risks posed by malware. From uncovering how malware infiltrates systems to developing robust defense mechanisms, malware analysis plays a <strong>crucial role</strong> in cybersecurity.
+      </p>
+      <p>
+        In this blog, we’ll explore the fundamentals of malware analysis, various <span class="highlight">malware types</span>, methodologies used in analysis, and advanced techniques employed by cybercriminals. Whether you’re a beginner or an experienced analyst, this guide offers insights into the world of <span class="highlight">malware research</span> and detection.
+      </p>
+
+      <h2>What is Malware?</h2>
+      <p>
+        <span class="highlight">Malware</span>, short for malicious software, refers to any software designed to <strong>disrupt, damage, or gain unauthorized access</strong> to computer systems. It’s been a cybersecurity concern since the early days of computing, evolving into sophisticated threats targeting individuals, businesses, and governments.
+      </p>
+      <p>
+        The primary objectives of malware include <strong>stealing sensitive data</strong>, spying on user activity, disrupting services, and demanding ransom payments. Infamous attacks like <span class="highlight">WannaCry</span> and <span class="highlight">Emotet</span> have caused widespread damage, underscoring the need for effective analysis.
+      </p>
+      <h3>Examples of Malware in Action</h3>
+      <p>
+        Think of malware as a <strong>digital burglar</strong>—it sneaks in, manipulates your data, and tries to stay hidden. A <span class="highlight">Trojan horse</span>, for instance, might disguise itself as a legitimate app while secretly recording keystrokes or exfiltrating credentials. Fun fact: if "we" were malware—just joking—it’d be a sneaky piece of software snagging your credentials!
+      </p>
+
+      <h2>Why Analyze Malware?</h2>
+      <ul>
+        <li><span class="highlight">Identifying Cyber Threats</span>: Determine behavior, infection methods, and potential damage.</li>
+        <li><span class="highlight">Developing Security Measures</span>: Create detection signatures and antivirus definitions through <strong>reverse engineering</strong>.</li>
+        <li><span class="highlight">Threat Intelligence</span>: Gain insights into cybercriminal tactics for future defense.</li>
+      </ul>
+
+      <h2>Types of Malware</h2>
+      <h3>Common Types</h3>
+      <ul>
+        <li><strong>Viruses</strong>: Self-replicating programs that modify other files and spread across systems.</li>
+        <li><strong>Worms</strong>: Standalone malware that spreads automatically via networks.</li>
+        <li><strong>Trojans</strong>: Disguised as legitimate software to trick users into executing harmful payloads.</li>
+        <li><strong>Ransomware</strong>: Encrypts data and demands ransom—decryption only after the attacker’s paid!</li>
+        <li><strong>Rootkits</strong>: Deeply embedded to hide malicious activity.</li>
+        <li><strong>Fileless Malware</strong>: Operates in memory without leaving traditional file traces.</li>
+      </ul>
+      <h3>Advanced Techniques</h3>
+      <ul>
+        <li><span class="highlight">Polymorphic Malware</span>: Changes its appearance or obfuscates code to evade detection.</li>
+        <li><span class="highlight">Metamorphic Malware</span>: Rewrites its code completely while maintaining functionality.</li>
+      </ul>
+
+      <h2>Basic Malware Analysis Methodologies</h2>
+      <h3>Static Analysis</h3>
+      <p>
+        <span class="highlight">Static analysis</span> involves examining malware without executing it, revealing its structure and functionality through code and resources.
+      </p>
+      <ul>
+        <li><strong>Inspecting PE Header</strong>: Analyzes the Portable Executable (PE) format to reveal metadata.</li>
+        <li><strong>Extracting Strings</strong>: Identifies hardcoded URLs, file paths, and commands.</li>
+        <li><strong>Analyzing Import/Export Tables</strong>: Reviews API calls to understand capabilities.</li>
+      </ul>
+      <p>
+        Tools like <span class="highlight">PE Explorer</span>, <span class="highlight">IDA Pro</span>, and <span class="highlight">Ghidra</span> are key for static analysis. For example, extracting strings might reveal a <strong>command-and-control (C2)</strong> server address.
+      </p>
+      <h3>Dynamic Analysis</h3>
+      <p>
+        <span class="highlight">Dynamic analysis</span> runs malware in a controlled environment (e.g., sandbox) to observe its real-time behavior safely.
+      </p>
+      <ul>
+        <li><strong>Virtual Machine Execution</strong>: Monitors in a sandbox like <span class="highlight">Cuckoo Sandbox</span>.</li>
+        <li><strong>System Changes</strong>: Tracks file modifications, registry changes, and more.</li>
+        <li><strong>Network Analysis</strong>: Uses <span class="highlight">Wireshark</span> or <span class="highlight">Process Monitor</span> to capture C2 communication.</li>
+      </ul>
+      <p>
+        For instance, running malware in <span class="highlight">Cuckoo Sandbox</span> can expose <strong>network connections</strong> or <strong>data exfiltration</strong> attempts.
+      </p>
+
+      <h2>Deep Dive: Windows APIs and Malware Interaction</h2>
+      <p>
+        Malware often leverages <span class="highlight">Windows APIs</span> to manipulate processes, memory, and system settings.
+      </p>
+      <h3>Process Management APIs</h3>
+      <ul>
+        <li><strong>CreateProcess</strong>: Launches hidden scripts (e.g., a <span class="highlight">PowerShell script</span> for persistence).</li>
+        <li><strong>OpenProcess</strong>: Enables code injection into running processes.</li>
+        <li><strong>TerminateProcess</strong>: Kills security tools or competing malware.</li>
+      </ul>
+      <h3>Memory Manipulation</h3>
+      <ul>
+        <li><strong>VirtualAlloc</strong>: Allocates memory for storing malicious payloads.</li>
+        <li><strong>ReadProcessMemory</strong>: Reads data from other processes.</li>
+        <li><strong>WriteProcessMemory</strong>: Injects code into target processes.</li>
+      </ul>
+      <h3>DLL Injection Techniques</h3>
+      <p>
+        <span class="highlight">DLL injection</span> forces a legitimate process to load a malicious DLL:
+      </p>
+      <ul>
+        <li><strong>Remote Thread Injection</strong>: Creates a thread in a remote process.</li>
+        <li><strong>Reflective DLL Injection</strong>: Loads a DLL into memory without disk writes.</li>
+      </ul>
+      <p>
+        Example: Injecting into <span class="highlight">explorer.exe</span> to evade security software.
+      </p>
+      <h3>Registry Manipulation</h3>
+      <ul>
+        <li><strong>RegCreateKeyEx</strong>: Creates registry keys for persistence.</li>
+        <li><strong>RegSetValueEx</strong>: Sets values (e.g., under `Run` for auto-start).</li>
+      </ul>
+
+      <h2>Understanding the Portable Executable (PE) File Format</h2>
+      <p>
+        The <span class="highlight">PE file format</span> is central to Windows malware:
+      </p>
+      <ul>
+        <li><strong>Headers</strong>: Contain metadata and entry points.</li>
+        <li><strong>.text Section</strong>: Stores executable code.</li>
+        <li><strong>.data Section</strong>: Holds static data.</li>
+      </ul>
+      <h3>Common Indicators of Malicious PE Files</h3>
+      <ul>
+        <li><strong>Unusual Entry Points</strong>: Suggests tampering.</li>
+        <li><strong>Large .rsrc Section</strong>: May hide payloads.</li>
+        <li><strong>Abnormal Import/Export Tables</strong>: Flags suspicious APIs.</li>
+      </ul>
+      <p>
+        Example: Analyzing a PE file to locate its <strong>entry point</strong> or detect obfuscation.
+      </p>
+
+      <h2>Reverse Engineering Malware</h2>
+      <p>
+        <span class="highlight">Reverse engineering</span> decompiles malware to study its logic using tools like <span class="highlight">IDA Pro</span>, <span class="highlight">x64dbg</span>, and <span class="highlight">Ghidra</span>.
+      </p>
+      <ul>
+        <li><strong>Disassembling</strong>: Converts binary to assembly language.</li>
+        <li><strong>Debugging</strong>: Steps through execution with breakpoints.</li>
+        <li><strong>Deobfuscation</strong>: Unravels obfuscated or encrypted code (e.g., decrypting an <span class="highlight">XOR-encoded payload</span>).</li>
+      </ul>
+      <p>
+        Example: Using <span class="highlight">x64dbg</span> to trace a <strong>keylogging</strong> malware’s behavior.
+      </p>
+
+      <h2>Advanced Malware Behavior</h2>
+      <h3>Persistence Mechanisms</h3>
+      <ul>
+        <li><strong>Registry Manipulation</strong>: Adds auto-run entries for persistence.</li>
+        <li><strong>Service Creation</strong>: Registers malware as a system service.</li>
+        <li><strong>Startup Folder Shortcuts</strong>: Places shortcuts for automatic launch.</li>
+      </ul>
+      <p>
+        Example: Malware creating a <strong>service</strong> that runs on every startup.
+      </p>
+      <h3>Network-Based Behavior</h3>
+      <ul>
+        <li><strong>C2 Communication</strong>: Connects to remote servers for instructions.</li>
+        <li><strong>DNS Tunneling</strong>: Hides traffic in DNS requests.</li>
+      </ul>
+      <p>
+        Example: Analyzing <span class="highlight">HTTP/HTTPS traffic</span> to a C2 server.
+      </p>
+
+      <h2>YARA Rules for Malware Detection</h2>
+      <p>
+        <span class="highlight">YARA</span> identifies malware via pattern matching. Here’s a basic rule:
+      </p>
+      <pre>
+rule RansomwareDetection {
+    strings:
+        $s1 = "encrypt"
+        $s2 = "AES"
+    condition:
+        $s1 and $s2
+}
+      </pre>
+      <p>
+        Advanced techniques include scanning <span class="highlight">PE modules</span>, <span class="highlight">ELF files</span>, or memory for <strong>fileless malware</strong>.
+      </p>
+
+      <h2>Building Your Own Malware Lab</h2>
+      <p>
+        Set up a secure lab with <span class="highlight">virtual machines</span> and isolation:
+      </p>
+      <ul>
+        <li><strong>VirtualBox</strong>, <strong>VMware</strong>, or <span class="highlight">Cuckoo Sandbox</span> for sandboxing.</li>
+        <li><strong>REMnux</strong> for specialized analysis.</li>
+      </ul>
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Use an <strong>air-gapped network</strong> to prevent external infections.</li>
+        <li>Take <strong>VM snapshots</strong> before running malware.</li>
+        <li><strong>Never run malware</strong> on a host system—safety first!</li>
+      </ul>
+      <p>
+        <strong>Legal Note</strong>: Be aware of laws regarding malware analysis and distribution.
+      </p>
+
+      <h2>Case Study: Analyzing Real-World Malware</h2>
+      <p>
+        Let’s explore analyzing <span class="highlight">Zeus</span> or <span class="highlight">Emotet</span>:
+      </p>
+      <ul>
+        <li><strong>Static Analysis</strong>: Extract strings and review PE structure.</li>
+        <li><strong>Dynamic Analysis</strong>: Monitor behavior in a sandbox.</li>
+        <li><strong>Reverse Engineering</strong>: Disassemble to uncover its logic.</li>
+      </ul>
+
+      <h2>Windows APIs Commonly Abused for Malicious Purposes</h2>
+      <h3>Process Injection APIs</h3>
+      <ul>
+        <li><strong>CreateRemoteThread</strong>: Creates a thread in a remote process for injection.</li>
+        <li><strong>VirtualAllocEx</strong>: Allocates memory in another process.</li>
+        <li><strong>WriteProcessMemory</strong>: Writes malicious code into memory.</li>
+        <li><strong>NtQueueApcThread</strong>: Queues an APC for stealthy injection.</li>
+      </ul>
+      <pre>
+HANDLE hThread = CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)pFunction, pArg, 0, NULL);
+      </pre>
+      <h3>Process Manipulation APIs</h3>
+      <ul>
+        <li><strong>OpenProcess</strong>: Accesses a process for manipulation.</li>
+        <li><strong>TerminateProcess</strong>: Terminates security tools.</li>
+        <li><strong>SuspendThread/ResumeThread</strong>: Pauses or resumes threads.</li>
+      </ul>
+      <h3>Persistence Mechanism APIs</h3>
+      <ul>
+        <li><strong>RegSetValueEx</strong>: Adds registry entries for startup.</li>
+        <li><strong>CreateService/StartService</strong>: Runs as a persistent service.</li>
+        <li><strong>SetWindowsHookEx</strong>: Hooks events (e.g., for keyloggers).</li>
+        <li><strong>ShellExecute</strong>: Launches payloads.</li>
+      </ul>
+      <h3>File and Directory Manipulation APIs</h3>
+      <ul>
+        <li><strong>CreateFile/WriteFile/ReadFile</strong>: Manages files for payloads or data theft.</li>
+        <li><strong>DeleteFile</strong>: Erases evidence.</li>
+        <li><strong>SetFileAttributes</strong>: Hides files.</li>
+      </ul>
+      <h3>Network Communication APIs</h3>
+      <ul>
+        <li><strong>WSAStartup/socket/connect</strong>: Sets up network sockets.</li>
+        <li><strong>InternetOpen/InternetOpenUrl</strong>: Handles HTTP/FTP communication.</li>
+        <li><strong>FtpPutFile</strong>: Uploads stolen data.</li>
+      </ul>
+      <h3>Memory Manipulation APIs</h3>
+      <ul>
+        <li><strong>VirtualAlloc/VirtualFree</strong>: Manages memory for payloads.</li>
+        <li><strong>RtlCopyMemory</strong>: Copies shellcode.</li>
+        <li><strong>VirtualProtectEx</strong>: Changes memory permissions.</li>
+      </ul>
+      <h3>Obfuscation and Anti-Debugging APIs</h3>
+      <ul>
+        <li><strong>CheckRemoteDebuggerPresent/IsDebuggerPresent</strong>: Detects debuggers.</li>
+        <li><strong>NtSetInformationThread</strong>: Hides threads from debuggers.</li>
+        <li><strong>Sleep</strong>: Delays execution to thwart analysis.</li>
+      </ul>
+      <h3>Credential Stealing APIs</h3>
+      <ul>
+        <li><strong>CredEnumerate/CredRead</strong>: Extracts credentials from Windows.</li>
+        <li><strong>LsaRetrievePrivateData</strong>: Steals LSA-stored passwords.</li>
+      </ul>
+
+      <h2>Resources for Malware Analysis</h2>
+      <p>
+        Deepen your knowledge with these:
+      </p>
+      <ul>
+        <li><strong>Books</strong>: <span class="highlight">Practical Malware Analysis</span> by Sikorski & Honig; <span class="highlight">Windows Internals</span> by Yosifovich et al.</li>
+        <li><strong>Windows API Docs</strong>: <a href="https://learn.microsoft.com/en-us/windows/win32/api/">MSDN</a>.</li>
+        <li><strong>PE Format</strong>: <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format">PE File Format</a>.</li>
+        <li><strong>Tools</strong>: <span class="highlight">OllyDbg</span>, <span class="highlight">Yara</span>, <span class="highlight">Cuckoo Sandbox</span>.</li>
+      </ul>
+      <p>
+        Stay tuned—more on <span class="highlight">dynamic/static analysis</span> to come (8-10 tomorrow)!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2024 Havox. All rights reserved.
+  </footer>
 </body>
 </html>
